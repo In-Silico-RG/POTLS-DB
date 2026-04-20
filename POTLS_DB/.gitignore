@@ -1,0 +1,34 @@
+# Dataset (deposited on Zenodo, not tracked in git)
+data/structures/*.json
+data/convergence/*.csv
+data/lgs_raw/
+
+# LGS outputs
+lgs_raw/
+*.mol
+POTLS_DB_output/
+POTLS_DB_test_output/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+.env
+venv/
+.venv/
+
+# Logs
+*.log
+potls_run.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Java
+*.class
+*.jar
+!docs/lgs_reference.jar

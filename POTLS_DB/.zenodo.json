@@ -1,0 +1,91 @@
+{
+  "title": "POTLS-DB: Palm Oil Technical Lignin Structural Dataset",
+  "description": "<p>POTLS-DB is a computational dataset of lignin molecular models derived from palm oil processing by-products — Empty Fruit Bunch (EFB), Mesocarp Fiber (MF), and Kernel Shell (KS) — extracted by three industrial pulping methods: kraft, soda, and organosolv.</p><p>The dataset was generated using the Lignin Structure Generator (LGS) tool (Eswaran et al., <em>Scientific Data</em> 2022) with input parameters calibrated from experimental HSQC-NMR, MALDI-TOF, and GPC literature data. All generated structures are validated by a three-filter QC pipeline (SMILES validity, S/G compositional check ±5%, and MW calibration window ±20%) and characterized using RDKit molecular descriptors.</p><p><strong>Contents:</strong> ~50,000–130,000 QC-validated lignin oligomer structures (JSON format) with 20+ descriptors per structure; LGS configuration files (27 YAML); generation pipeline scripts; convergence statistics; metadata table.</p><p><strong>Parent paper:</strong> Oñate-Gutiérrez et al. (2025). Comparative study of palm oil lignins: Impact of biomass source and extraction method.</p>",
+  "creators": [
+    {
+      "name": "Combariza, Aldo F.",
+      "affiliation": "IN SILICO Research Group, Facultad de Ingeniería, Universidad de Sucre, Sincelejo, Colombia",
+      "orcid": "0000-0001-XXXX-XXXX"
+    },
+    {
+      "name": "Oñate-Gutiérrez, Jesús A.",
+      "affiliation": "School of Chemistry, Universidad Industrial de Santander, Bucaramanga, Colombia"
+    },
+    {
+      "name": "Vargas-Vergara, Sebastián D.",
+      "affiliation": "Agroindustrial Engineering Department, Universidad de Sucre, Sincelejo, Colombia"
+    },
+    {
+      "name": "Combariza, Marianny Y.",
+      "affiliation": "School of Chemistry, Universidad Industrial de Santander, Bucaramanga, Colombia"
+    },
+    {
+      "name": "Blanco-Tirado, Cristian",
+      "affiliation": "School of Chemistry, Universidad Industrial de Santander, Bucaramanga, Colombia"
+    },
+    {
+      "name": "Pinzón, Julio R.",
+      "affiliation": "School of Chemistry, Universidad Industrial de Santander, Bucaramanga, Colombia"
+    }
+  ],
+  "keywords": [
+    "lignin",
+    "palm oil",
+    "computational chemistry",
+    "molecular modeling",
+    "lignocellulosic biomass",
+    "kraft lignin",
+    "soda lignin",
+    "organosolv lignin",
+    "Empty Fruit Bunch",
+    "Mesocarp Fiber",
+    "Kernel Shell",
+    "RDKit",
+    "cheminformatics",
+    "SMILES",
+    "biopolymer dataset",
+    "Elaeis guineensis",
+    "degree of polymerization",
+    "van Krevelen",
+    "lignin structure generator"
+  ],
+  "license": "cc-by-4.0",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "language": "eng",
+  "communities": [
+    {"identifier": "cheminformatics"},
+    {"identifier": "computational-chemistry"}
+  ],
+  "grants": [
+    {
+      "id": "SGR BPIN 2020000100251",
+      "funder": "SGR-Gobernación de Santander, Colombia"
+    },
+    {
+      "id": "SGR BPIN 2021000100022",
+      "funder": "SGR-Minciencias, Colombia"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.1038/s41597-022-01709-4",
+      "relation": "isDerivedFrom",
+      "resource_type": "publication-article",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.6084/m9.figshare.16915672.v2",
+      "relation": "uses",
+      "resource_type": "dataset",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/In-Silico-RG/POTLS-DB",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Generated using LGS (Eswaran et al. 2022). Parameters calibrated from experimental data reported in Oñate-Gutiérrez et al. 2025. Code and configuration files available at https://github.com/In-Silico-RG/POTLS-DB"
+}

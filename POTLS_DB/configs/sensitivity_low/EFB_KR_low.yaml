@@ -1,0 +1,24 @@
+# POTLS-DB | Empty Fruit Bunch Kraft — Sensitivity LOW
+# Archetype: SG-rico | Linkage bounds: low
+project:
+  name: EFB_KR_low
+  dataset_id: POTLS_EFB_KR_L
+  biomass_source: Empty_Fruit_Bunch
+  pulping_method: Kraft
+  parameter_set: sensitivity_low
+  archetype: SG-rico
+monomers:
+  G: 0.303
+  S: 0.697
+  H: 0.0
+linkages:
+  beta-O-4: 0.872
+  beta-beta: 0.051
+  beta-5: 0.051
+  5-5: 0.0
+  4-O-5: 0.026
+  DBDO: 0.0
+degree_of_polymerization:
+  min: 10
+  max: 16
+  M0_gmol: 201.3
