@@ -1,0 +1,35 @@
+# ============================================================
+# POTLS-DB | KS Organosolv — Central parameters
+# Archetype: G-dominante (S/G = 0.1)
+# M0 = 182.9 g/mol
+# H/C pred. = 1.109, O/C pred. = 0.337
+# ============================================================
+project:
+  name: "KS_Org_central"
+  dataset_id: "POTLS_KS_OR_C"
+  biomass_source: "Kernel_Shell"
+  pulping_method: "Organosolv"
+  parameter_set: "central"
+  archetype: "G-dominante"
+
+monomers:
+  G: 0.909
+  S: 0.091
+  H: 0.000
+
+linkages:
+  beta-O-4: 0.63
+  beta-beta: 0.05
+  beta-5: 0.14
+  5-5: 0.07
+  4-O-5: 0.07
+  DBDO: 0.04
+degree_of_polymerization:
+  min: 3
+  max: 8
+  M0_gmol: 182.9
+
+validation_targets:
+  H_C_range: [1.10, 1.18]
+  O_C_range: [0.31, 0.36]
+  phenolic_OH_mmol_g: [2.31, 2.53]

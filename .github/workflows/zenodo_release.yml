@@ -1,0 +1,94 @@
+name: Zenodo Release Deposition
+
+# Trigger: when a GitHub Release is published
+# This creates a new version on Zenodo and updates the DOI
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  zenodo-deposit:
+    name: Deposit to Zenodo
+    runs-on: ubuntu-latest
+
+    steps:
+      # ── 1. Checkout full repo ──────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # ── 2. Set up Python ──────────────────────────────────────────────────
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # ── 3. Install dependencies ───────────────────────────────────────────
+      - name: Install Python dependencies
+        run: |
+          pip install requests PyYAML
+
+      # ── 4. Package code files (configs + scripts, NOT large data) ─────────
+      # Large JSON structure files must be pre-uploaded to Zenodo manually
+      # or via the zenodo_upload.py script. This workflow deposits:
+      #   - All YAML configuration files
+      #   - Python scripts
+      #   - Documentation
+      #   - README, LICENSE, CITATION.cff
+      - name: Package release files
+        run: |
+          VERSION=${{ github.event.release.tag_name }}
+          echo "Packaging POTLS-DB version ${VERSION}"
+          
+          # Create release archive (code + configs, no data)
+          zip -r POTLS_DB_code_${VERSION}.zip \
+            configs/ \
+            scripts/ \
+            docs/ \
+            notebooks/ \
+            README.md \
+            CITATION.cff \
+            LICENSE \
+            LICENSE_CODE \
+            requirements.txt \
+            environment.yml \
+            .zenodo.json \
+            --exclude "*.pyc" --exclude "__pycache__/*"
+          
+          echo "Package size: $(du -sh POTLS_DB_code_${VERSION}.zip)"
+
+      # ── 5. Update Zenodo metadata and upload ──────────────────────────────
+      - name: Upload to Zenodo
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+          ZENODO_CONCEPT_DOI: ${{ secrets.ZENODO_CONCEPT_DOI }}
+          GITHUB_TAG: ${{ github.event.release.tag_name }}
+          GITHUB_RELEASE_BODY: ${{ github.event.release.body }}
+        run: |
+          python scripts/zenodo_upload.py \
+            --token    "${ZENODO_TOKEN}" \
+            --concept  "${ZENODO_CONCEPT_DOI}" \
+            --version  "${GITHUB_TAG}" \
+            --notes    "${GITHUB_RELEASE_BODY}"
+
+      # ── 6. Post DOI back to GitHub Release notes ──────────────────────────
+      - name: Update Release with Zenodo DOI
+        uses: actions/github-script@v7
+        env:
+          ZENODO_DOI_FILE: zenodo_doi.txt
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const doi = fs.readFileSync('zenodo_doi.txt', 'utf8').trim();
+            const body = context.payload.release.body || '';
+            const newBody = `${body}\n\n---\n**Zenodo DOI:** https://doi.org/${doi}`;
+            await github.rest.repos.updateRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              release_id: context.payload.release.id,
+              body: newBody
+            });
+            console.log(`Updated release with DOI: ${doi}`);

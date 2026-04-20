@@ -1,0 +1,72 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it using the metadata below."
+type: dataset
+title: "POTLS-DB: Palm Oil Technical Lignin Structural Dataset"
+abstract: >
+  Computational dataset of lignin molecular models derived from palm oil
+  processing by-products (Empty Fruit Bunch, Mesocarp Fiber, Kernel Shell)
+  extracted by kraft, soda, and organosolv pulping methods. Generated using
+  the Lignin Structure Generator (LGS) with parameters calibrated from
+  experimental HSQC-NMR, MALDI-TOF, and GPC data. Includes ~50,000–130,000
+  QC-validated structures with 20+ molecular descriptors per structure.
+authors:
+  - family-names: "Combariza"
+    given-names: "Aldo F."
+    affiliation: "Universidad de Sucre"
+    orcid: "https://orcid.org/0000-0001-XXXX-XXXX"
+    email: "insilicorg@gmail.com"
+  - family-names: "Oñate-Gutiérrez"
+    given-names: "Jesús A."
+    affiliation: "Universidad Industrial de Santander"
+  - family-names: "Vargas-Vergara"
+    given-names: "Sebastián D."
+    affiliation: "Universidad de Sucre"
+  - family-names: "Combariza"
+    given-names: "Marianny Y."
+    affiliation: "Universidad Industrial de Santander"
+  - family-names: "Blanco-Tirado"
+    given-names: "Cristian"
+    affiliation: "Universidad Industrial de Santander"
+  - family-names: "Pinzón"
+    given-names: "Julio R."
+    affiliation: "Universidad Industrial de Santander"
+repository-code: "https://github.com/In-Silico-RG/POTLS-DB"
+url: "https://doi.org/10.5281/zenodo.XXXXXXX"
+doi: "10.5281/zenodo.XXXXXXX"
+version: "1.0.0"
+date-released: "2025-XX-XX"
+license: "CC-BY-4.0"
+keywords:
+  - lignin
+  - palm oil
+  - computational chemistry
+  - molecular modeling
+  - lignocellulosic biomass
+  - kraft pulping
+  - organosolv
+  - RDKit
+  - cheminformatics
+  - biopolymer dataset
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.XXXXXXX"
+    description: "Zenodo dataset DOI"
+references:
+  - type: article
+    title: "Molecular structural dataset of lignin macromolecule elucidating experimental structural compositions"
+    authors:
+      - family-names: "Eswaran"
+        given-names: "Sudha cheranma devi"
+      - family-names: "Subramaniam"
+        given-names: "Senthil"
+      - family-names: "Sanyal"
+        given-names: "Udishnu"
+      - family-names: "Rallo"
+        given-names: "Robert"
+      - family-names: "Zhang"
+        given-names: "Xiao"
+    journal: "Scientific Data"
+    volume: 9
+    pages: "647"
+    year: 2022
+    doi: "10.1038/s41597-022-01709-4"

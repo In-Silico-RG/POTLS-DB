@@ -1,0 +1,36 @@
+# ============================================================
+# POTLS-DB | EFB Soda — Central parameters
+# Archetype: SG-rico (S/G = 1.5)
+# M0 = 0.400*180.2 + 0.600*210.2 = 198.2 g/mol
+# H/C pred. = 1.098, O/C pred. = 0.353
+# ============================================================
+project:
+  name: "EFB_Soda_central"
+  dataset_id: "POTLS_EFB_SD_C"
+  biomass_source: "Empty_Fruit_Bunch"
+  pulping_method: "Soda"
+  parameter_set: "central"
+  archetype: "SG-rico"
+
+monomers:
+  G: 0.400
+  S: 0.600
+  H: 0.000
+
+linkages:
+  beta-O-4: 0.74
+  beta-beta: 0.12
+  beta-5: 0.08
+  5-5: 0.01
+  4-O-5: 0.05
+  DBDO: 0.00
+
+degree_of_polymerization:
+  min: 10
+  max: 16
+  M0_gmol: 198.2
+
+validation_targets:
+  H_C_range: [1.09, 1.15]
+  O_C_range: [0.33, 0.38]
+  phenolic_OH_mmol_g: [0.45, 0.72]

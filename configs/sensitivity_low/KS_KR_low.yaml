@@ -1,0 +1,24 @@
+# POTLS-DB | Kernel Shell Kraft — Sensitivity LOW
+# Archetype: G-dominante | Linkage bounds: low
+project:
+  name: KS_KR_low
+  dataset_id: POTLS_KS_KR_L
+  biomass_source: Kernel_Shell
+  pulping_method: Kraft
+  parameter_set: sensitivity_low
+  archetype: G-dominante
+monomers:
+  G: 0.909
+  S: 0.091
+  H: 0.0
+linkages:
+  beta-O-4: 0.746
+  beta-beta: 0.038
+  beta-5: 0.127
+  5-5: 0.038
+  4-O-5: 0.038
+  DBDO: 0.013
+degree_of_polymerization:
+  min: 11
+  max: 18
+  M0_gmol: 182.9
