@@ -224,7 +224,7 @@ This work was supported by SGR-Gobernación de Santander Grant BPIN 202000010025
 ## Contact
 
 **IN SILICO Research Group**  
-Facultad de Ingeniería, Universidad de Sucre  
+Facultad de Educación y Ciencias, Universidad de Sucre  
 Sincelejo, Sucre, Colombia  
-✉ insilicorg@gmail.com  
+✉ insilico@unisucre.edu.co  
 🔗 https://github.com/In-Silico-RG
