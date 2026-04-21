@@ -31,10 +31,10 @@ authors:
     given-names: "Julio R."
     affiliation: "Universidad Industrial de Santander"
 repository-code: "https://github.com/In-Silico-RG/POTLS-DB"
-url: "https://doi.org/10.5281/zenodo.XXXXXXX"
-doi: "10.5281/zenodo.XXXXXXX"
+url: "https://doi.org/10.5281/zenodo.19685101"
+doi: "10.5281/zenodo.19685101"
 version: "1.0.0"
-date-released: "2025-XX-XX"
+date-released: "2025-04-21"
 license: "CC-BY-4.0"
 keywords:
   - lignin
@@ -49,7 +49,7 @@ keywords:
   - biopolymer dataset
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.XXXXXXX"
+    value: "10.5281/zenodo.19685101"
     description: "Zenodo dataset DOI"
 references:
   - type: article

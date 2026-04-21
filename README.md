@@ -1,6 +1,6 @@
 # POTLS-DB: Palm Oil Technical Lignin Structural Dataset
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19685101.svg)](https://doi.org/10.5281/zenodo.19685101)
 [![License: CC BY 4.0](https://img.shields.io/badge/Data%20License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![License: MIT](https://img.shields.io/badge/Code%20License-MIT-blue.svg)](LICENSE_CODE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
@@ -73,7 +73,7 @@ POTLS-DB/
 
 Large structure files (JSON) are **not stored in this repository** due to size. They are deposited on Zenodo:
 
-> **Zenodo DOI:** [10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX)
+> **Zenodo DOI:** [10.5281/zenodo.19685101](https://doi.org/10.5281/zenodo.19685101)
 
 To download and set up locally:
 
@@ -84,7 +84,7 @@ pip install -r requirements.txt
 
 # Download data from Zenodo (requires zenodo_get)
 pip install zenodo_get
-zenodo_get 10.5281/zenodo.XXXXXXX -o data/
+zenodo_get 10.5281/zenodo.19685101 -o data/
 ```
 
 ---
@@ -172,8 +172,8 @@ If you use POTLS-DB in your research, please cite both the dataset and the paren
   title     = {{POTLS-DB}: Palm Oil Technical Lignin Structural Dataset},
   year      = {2025},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.XXXXXXX},
-  url       = {https://doi.org/10.5281/zenodo.XXXXXXX}
+  doi       = {10.5281/zenodo.19685101},
+  url       = {https://doi.org/10.5281/zenodo.19685101}
 }
 ```
 
